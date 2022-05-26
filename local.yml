@@ -12,6 +12,4 @@
       dest: /opt/cacao/playbook.yml
 
 - name: executing the play
-  hosts: localhost
-  connection: local
   import_playbook: /opt/cacao/playbook.yml
