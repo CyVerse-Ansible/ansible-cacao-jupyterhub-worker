@@ -1,0 +1,7 @@
+- name: this playbook will setup ez singularity locally
+  hosts: localhost
+  connection: local
+
+  tasks:
+  - name: pull in any Ansible Galaxy roles from the requirements.yml
+    command: ansible-galaxy install -r requirements.yml
