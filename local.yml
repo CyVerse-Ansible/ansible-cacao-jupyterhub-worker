@@ -7,12 +7,7 @@
     shell: ansible-galaxy role install -r requirements.yml
 
   - name: pull in any Ansible Galaxy collections from the requirements.yml
-    shell: ansible-galaxy collections install -r requirements.yml
-
-  - name: GET_URL; get the playbook
-    get_url:
-      url: "{{ ANSIBLE_PLAYBOOK_URL }}"
-      dest: /opt/cacao/playbook.yml
+    shell: ansible-galaxy collection install -r requirements.yml
 
 - name: executing the play
   import_playbook: /opt/cacao/playbook.yml
