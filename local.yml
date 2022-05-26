@@ -1,4 +1,4 @@
-- name: this playbook will setup ez singularity locally
+- name: setup and downloading play
   hosts: localhost
   connection: local
 
@@ -11,3 +11,7 @@
       url: "{{ ANSIBLE_PLAYBOOK_URL }}"
       dest: /opt/cacao/playbook.yml
 
+- name: executing the play
+  hosts: localhost
+  connection: local
+  import_playbook: /opt/cacao/playbook.yml
