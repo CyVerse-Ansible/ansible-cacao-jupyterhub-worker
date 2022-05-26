@@ -4,7 +4,10 @@
 
   tasks:
   - name: pull in any Ansible Galaxy roles from the requirements.yml
-    shell: ansible-galaxy install -r requirements.yml
+    shell: ansible-galaxy role install -r requirements.yml
+
+  - name: pull in any Ansible Galaxy collections from the requirements.yml
+    shell: ansible-galaxy collections install -r requirements.yml
 
   - name: GET_URL; get the playbook
     get_url:
